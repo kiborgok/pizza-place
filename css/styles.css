@@ -1,0 +1,57 @@
+.burger-item{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 25px;
+    padding: 25px 30px;
+    border-radius: 25px;
+    box-shadow: 1px 8px 10px 1px lightgray;
+}
+
+.burger-item > article{
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.burger-item > div{
+    width: 100%;
+}
+
+.burger-item > p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.burger-item > div > img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.ksh-trolley{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ksh-trolley > div{
+    display: flex;
+    width: 55px;
+    background-color: #E1EBE6;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.ksh-trolley > div > img{
+    width: 60%;
+}
+
+
+.ksh-trolley > div > span{
+    font-weight: bold;
+    color: cadetblue;
+    padding: 5px;
+}
