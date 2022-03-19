@@ -103,6 +103,25 @@ $(document).ready(function () {
       </td>
       <td>${cost}</td></tr>`
     );
-    $(".check-out").show();
+      $(".check-out").show();
+      $(".check-out").click(function () {
+          $(".check-out").hide();
+          $(".checkout-msg .msg").text("Your total is ksh. " + totalCost)
+          $(".checkout-msg .deliver").text("Delivery fee is ksh. 200, total pay will be ksh. " + parseInt(totalCost + 200));
+          $(".checkout-msg .accept-decline").show()
+      })
+      $(".bg-danger").click(function () {
+          $(".checkout-msg .accept-decline").hide();
+          $(".final-msg").text("Your order is ready, come pick it. " +parseInt(totalCost))
+      })
+      $(".bg-success").click(function () {
+          $(".checkout-msg .accept-decline").hide();
+          console.log("before")
+          let loc = prompt("Enter your location ")
+          console.log("after");
+          $(".final-msg").text("Your order will be delivered to " + loc + ". Total charged amount " + parseInt(totalCost + 200));
+          
+            });
+      
   });
 });
