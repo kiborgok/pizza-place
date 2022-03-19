@@ -1,9 +1,21 @@
+body{
+    font-family: 'Poppins';
+    background-color: whitesmoke;
+}
+h5{
+    color: brown;
+    margin: 8px;
+}
 .container{
     display: flex;
+    margin: 0;
 }
 
 .burger-item{
+    background-color: goldenrod;
+    min-width: 350px;
     width: 40%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,4 +57,9 @@
     width: 60%;
     cursor: pointer;
     background-color: cadetblue;
+    color: brown;
+}
+
+.check-out{
+    display: none;
 }
