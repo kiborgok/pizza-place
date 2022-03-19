@@ -33,30 +33,16 @@
     height: auto;
     border-radius: 50%;
 }
-.ksh-trolley{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
 
-.ksh-trolley > div{
+
+.ksh-trolley {
     display: flex;
-    width: 55px;
-    background-color: #E1EBE6;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     padding: 5px;
     border-radius: 8px;
-}
-
-.ksh-trolley > div > img{
     width: 60%;
-}
-
-
-.ksh-trolley > div > span{
-    font-weight: bold;
-    color: cadetblue;
-    padding: 5px;
+    cursor: pointer;
+    background-color: cadetblue;
 }
