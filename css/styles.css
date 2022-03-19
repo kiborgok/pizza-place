@@ -1,6 +1,27 @@
 body{
+    display: flex;
     font-family: 'Poppins';
     background-color: whitesmoke;
+    flex-direction: column;
+}
+.shop-name{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+}
+hr{
+    margin: 0px
+}
+td,tr,th{
+    color: brown;
+}
+.shop-name > h1{
+    font-family: Lobster;
+    text-align: center;
+    font-size: 3em;
+    color: brown;
 }
 h5{
     color: brown;
@@ -11,10 +32,10 @@ h5{
     margin: 0;
 }
 
-.burger-item{
+.pizza-item{
     background-color: goldenrod;
     min-width: 350px;
-    width: 40%;
+    width: 35%;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -27,20 +48,20 @@ h5{
     flex-wrap: wrap;
 }
 
-.burger-item > article{
+.pizza-item > article{
     margin-bottom: 15px;
     margin-top: 5px;
 }
 
-.burger-item > div{
+.pizza-item > div{
     width: 100%;
 }
 
-.burger-item > p{
+.pizza-item > p{
     text-align: center;
     margin-bottom: 10px;
 }
-.burger-item > div > img{
+.pizza-item > div > img{
     width: 100%;
     height: auto;
     border-radius: 50%;
@@ -54,7 +75,7 @@ h5{
     justify-content: center;
     padding: 5px;
     border-radius: 8px;
-    width: 60%;
+    width: 40%;
     cursor: pointer;
     background-color: cadetblue;
     color: brown;
@@ -62,4 +83,13 @@ h5{
 
 .check-out{
     display: none;
+}
+
+.accept-decline{
+    display: none;
+}
+.accept-decline span{
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
 }
