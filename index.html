@@ -11,6 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -21,7 +22,7 @@
         </div>
         <form action="">
           <div>
-            <h4>Size</h4>
+            <h5>Size</h5>
             <div
               class="btn-group"
               role="group"
@@ -66,7 +67,7 @@
             </div>
           </div>
           <div>
-            <h4>Crust</h4>
+            <h5>Crust</h5>
             <div
               class="btn-group"
               role="group"
@@ -79,7 +80,7 @@
                   name="crust"
                   id="btnradio1"
                   autocomplete="off"
-                  value="Stuffed"
+                  value="70"
                 />
                 <label class="btn btn-outline-primary" for="btnradio1"
                   >Stuffed</label
@@ -93,7 +94,7 @@
                   name="crust"
                   id="btnradio2"
                   autocomplete="off"
-                  value="Gluten-Free"
+                  value="100"
                 />
                 <label class="btn btn-outline-primary" for="btnradio2"
                   >Gluten-Free</label
@@ -107,7 +108,7 @@
                   name="crust"
                   id="btnradio3"
                   autocomplete="off"
-                  value="Crispy"
+                  value="150"
                 />
                 <label class="btn btn-outline-primary" for="btnradio3"
                   >Crispy</label
@@ -116,7 +117,7 @@
             </div>
           </div>
           <div>
-            <h4>Toppings</h4>
+            <h5>Toppings</h5>
             <div
               class="btn-group checkbox-g"
               role="group"
@@ -127,7 +128,7 @@
                 class="btn-check"
                 id="btncheck1"
                 autocomplete="off"
-                value="Mushroom"
+                value="50"
               />
               <label class="btn btn-outline-primary" for="btncheck1"
                 >Mushroom</label
@@ -138,7 +139,7 @@
                 class="btn-check"
                 id="btncheck2"
                 autocomplete="off"
-                value="Cheese"
+                value="80"
               />
               <label class="btn btn-outline-primary" for="btncheck2"
                 >Cheese</label
@@ -149,7 +150,7 @@
                 class="btn-check"
                 id="btncheck3"
                 autocomplete="off"
-                value="Pepperoni"
+                value="100"
               />
               <label class="btn btn-outline-primary" for="btncheck3"
                 >Pepperoni</label
@@ -157,18 +158,16 @@
             </div>
           </div>
         </form>
-        <div class="ksh-trolley">
-          <span>Ksh. <strong>500</strong></span>
-          <div class="add" style="width: 100px; cursor: pointer">
+        <div class="ksh-trolley add">
             <strong>Add To Cart</strong>
-          </div>
         </div>
       </div>
       <div>
-        <table class="table">
+        <h2 style="text-align: center;color: brown;">Cart</h2>
+        <table class="table table-bordered table-striped table-warning">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">Order(s)</th>
               <th scope="col">Pizza Size</th>
               <th scope="col">Crust</th>
               <th scope="col">Toppings</th>
@@ -185,6 +184,7 @@
           </tr> -->
           </tbody>
         </table>
+        <button type="button" class="btn btn-primary check-out">Check Out</button>
       </div>
     </div>
     <script
