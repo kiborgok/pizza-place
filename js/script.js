@@ -47,6 +47,7 @@ $(document).ready(function () {
     this.pizzaCrust = pizzaCrust;
     this.pizzaTopping = {};
   }
+  //Create a prototype to return toppings object
   Order.prototype.addToppings = function () {
     this.pizzaTopping["mushroom"] = pizzaTopping1;
     this.pizzaTopping["cheese"] = pizzaTopping2;
@@ -69,7 +70,6 @@ $(document).ready(function () {
       return;
     }
     orderNumber += 1;
-    console.log("Total cost ", totalCost);
     let appendSize;
     let appendCrust;
     if (newOrder.pizzaSize == 1000) {
@@ -91,7 +91,6 @@ $(document).ready(function () {
       appendCrust = newOrder.pizzaCrust;
     }
 
-    console.log(appendSize);
 
     $("tbody").append(
       `<tr><th scope='row'>${orderNumber}</th><td>${appendSize} </td><td>${appendCrust}</td>
