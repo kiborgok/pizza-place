@@ -1,8 +1,10 @@
 body{
-    display: flex;
     font-family: 'Poppins';
-    background-color: whitesmoke;
-    flex-direction: column;
+    background-color: beige;
+}
+.container{
+    min-width: fit-content;
+    margin: 0;
 }
 .shop-name{
     padding: 10px;
@@ -27,7 +29,7 @@ h5{
     color: brown;
     margin: 8px;
 }
-.container{
+.content-cont{
     display: flex;
     margin: 0;
 }
@@ -35,8 +37,7 @@ h5{
 .pizza-item{
     background-color: goldenrod;
     min-width: 350px;
-    width: 35%;
-    height: 50%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,4 +93,30 @@ h5{
     margin: 5px;
     padding: 10px;
     cursor: pointer;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 540px) and (max-width:810px){
+    .content-cont{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .pizza-item{
+        min-width: 0px;
+    width: 65%;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .content-cont{
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .pizza-item{
+        width: 90%;
+    }
 }
