@@ -113,7 +113,7 @@ $(document).ready(function () {
     $(".bg-danger").click(function () {
       $(".checkout-msg .accept-decline").hide();
       $(".final-msg").text(
-        "Your order is ready, please come pick it. " + parseInt(totalCost)
+        "Your order is ready, please come pick it. Total charged amount ksh. " + parseInt(totalCost)
       );
     });
   });
