@@ -3,9 +3,9 @@ $(document).ready(function () {
   let pizzaCrust = 0;
   let pizzaTopping1 = 0;
   let pizzaTopping2 = 0;
-    let pizzaTopping3 = 0;
-    let totalCost = 0;
-    let orderNumber = 0;
+  let pizzaTopping3 = 0;
+  let totalCost = 0;
+  let orderNumber = 0;
   //Function to get size values
   $(".label-size").click(function () {
     $("input[name='size']").removeProp("selected");
@@ -41,23 +41,20 @@ $(document).ready(function () {
     }
     return (pizzaTopping3 = 0);
   });
-  
+  //Create a constructor to return each order
+  function Order(pizzaSize, pizzaCrust) {
+    this.pizzaSize = pizzaSize;
+    this.pizzaCrust = pizzaCrust;
+    this.pizzaTopping = {};
+  }
+  Order.prototype.addToppings = function () {
+    this.pizzaTopping["mushroom"] = pizzaTopping1;
+    this.pizzaTopping["cheese"] = pizzaTopping2;
+    this.pizzaTopping["pepperoni"] = pizzaTopping3;
+    return this.pizzaTopping;
+  };
+
   $(".add").click(function () {
-    //Create a constructor to return each order
-
-    function Order(pizzaSize, pizzaCrust) {
-      this.pizzaSize = pizzaSize;
-      this.pizzaCrust = pizzaCrust;
-      this.pizzaTopping = {};
-    }
-
-    Order.prototype.addToppings = function () {
-      this.pizzaTopping["mushroom"] = pizzaTopping1;
-      this.pizzaTopping["cheese"] = pizzaTopping2;
-      this.pizzaTopping["pepperoni"] = pizzaTopping3;
-      return this.pizzaTopping;
-    };
-
     let newOrder = new Order(pizzaSize, pizzaCrust);
     newOrder.addToppings();
     let cost =
@@ -68,10 +65,10 @@ $(document).ready(function () {
       newOrder.pizzaTopping.pepperoni;
     totalCost = totalCost + cost;
     if (cost == 0 || totalCost == 0 || newOrder.pizzaSize == 0) {
-        alert("Please pick at least a pizza size");
-        return
+      alert("Please pick at least a pizza size");
+      return;
     }
-      orderNumber += 1;
+    orderNumber += 1;
     console.log("Total cost ", totalCost);
     let appendSize;
     let appendCrust;
@@ -103,25 +100,31 @@ $(document).ready(function () {
       </td>
       <td>${cost}</td></tr>`
     );
-      $(".check-out").show();
-      $(".check-out").click(function () {
-          $(".check-out").hide();
-          $(".checkout-msg .msg").text("Your total is ksh. " + totalCost)
-          $(".checkout-msg .deliver").text("Delivery fee is ksh. 200, total pay will be ksh. " + parseInt(totalCost + 200));
-          $(".checkout-msg .accept-decline").show()
-      })
-      $(".bg-danger").click(function () {
-          $(".checkout-msg .accept-decline").hide();
-          $(".final-msg").text("Your order is ready, come pick it. " +parseInt(totalCost))
-      })
-      $(".bg-success").click(function () {
-          $(".checkout-msg .accept-decline").hide();
-          console.log("before")
-          let loc = prompt("Enter your location ")
-          console.log("after");
-          $(".final-msg").text("Your order will be delivered to " + loc + ". Total charged amount " + parseInt(totalCost + 200));
-          
-            });
-      
+    $(".check-out").show();
+    $(".check-out").click(function () {
+      $(".check-out").hide();
+      $(".checkout-msg .msg").text("Your total is ksh. " + totalCost);
+      $(".checkout-msg .deliver").text(
+        "Delivery fee is ksh. 200, total pay will be ksh. " +
+          parseInt(totalCost + 200)
+      );
+      $(".checkout-msg .accept-decline").show();
+    });
+    $(".bg-danger").click(function () {
+      $(".checkout-msg .accept-decline").hide();
+      $(".final-msg").text(
+        "Your order is ready, please come pick it. " + parseInt(totalCost)
+      );
+    });
   });
+      $(".bg-success").click(function () {
+        let loc = prompt("Enter your location ");
+        $(".checkout-msg .accept-decline").hide();
+        $(".final-msg").text(
+          "Your order will be delivered to " +
+            loc +
+            ". Total charged amount ksh. " +
+            parseInt(totalCost + 200)
+        );
+      });
 });
