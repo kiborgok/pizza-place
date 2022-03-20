@@ -11,195 +11,200 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Lobster"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="shop-name">
+    <div class="container d-flex flex-column">
+      <div class="shop-name">
         <h1>Smooth Pizza Palace</h1>
       </div>
-      <hr>
-    <div class="container">
-      
-      <div class="pizza-item">
-        
-        <div>
-          <img src="./images/piz1.jpg" alt="Burger" />
-        </div>
-        <form action="">
+      <hr />
+      <div class="content-cont">
+        <div class="pizza-item">
           <div>
-            <h5>Size</h5>
-            <div
-              class="btn-group"
-              role="group"
-              aria-label="Basic radio toggle button group"
-            >
-              <div class="label-size">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="size"
-                  id="small"
-                  autocomplete="off"
-                  value="500"
-                />
-                <label class="btn btn-outline-primary" for="small">Small</label>
-              </div>
+            <img src="./images/piz1.jpg" alt="Burger" />
+          </div>
+          <form action="">
+            <div>
+              <h5>Size</h5>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <div class="label-size">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="size"
+                    id="small"
+                    autocomplete="off"
+                    value="500"
+                  />
+                  <label class="btn btn-outline-primary" for="small"
+                    >Small</label
+                  >
+                </div>
 
-              <div class="label-size">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="size"
-                  id="medium"
-                  autocomplete="off"
-                  value="700"
-                />
-                <label class="btn btn-outline-primary" for="medium"
-                  >Medium</label
-                >
-              </div>
-              <div class="label-size">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="size"
-                  id="large"
-                  autocomplete="off"
-                  value="1000"
-                />
-                <label class="btn btn-outline-primary" for="large">Large</label>
+                <div class="label-size">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="size"
+                    id="medium"
+                    autocomplete="off"
+                    value="700"
+                  />
+                  <label class="btn btn-outline-primary" for="medium"
+                    >Medium</label
+                  >
+                </div>
+                <div class="label-size">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="size"
+                    id="large"
+                    autocomplete="off"
+                    value="1000"
+                  />
+                  <label class="btn btn-outline-primary" for="large"
+                    >Large</label
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <h5>Crust</h5>
-            <div
-              class="btn-group"
-              role="group"
-              aria-label="Basic radio toggle button group"
-            >
-              <div class="crust">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="crust"
-                  id="btnradio1"
-                  autocomplete="off"
-                  value="70"
-                />
-                <label class="btn btn-outline-primary" for="btnradio1"
-                  >Stuffed</label
-                >
-              </div>
+            <div>
+              <h5>Crust</h5>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <div class="crust">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="crust"
+                    id="btnradio1"
+                    autocomplete="off"
+                    value="70"
+                  />
+                  <label class="btn btn-outline-primary" for="btnradio1"
+                    >Stuffed</label
+                  >
+                </div>
 
-              <div class="crust">
+                <div class="crust">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="crust"
+                    id="btnradio2"
+                    autocomplete="off"
+                    value="100"
+                  />
+                  <label class="btn btn-outline-primary" for="btnradio2"
+                    >Gluten-Free</label
+                  >
+                </div>
+
+                <div class="crust">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="crust"
+                    id="btnradio3"
+                    autocomplete="off"
+                    value="150"
+                  />
+                  <label class="btn btn-outline-primary" for="btnradio3"
+                    >Crispy</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <h5>Toppings</h5>
+              <div
+                class="btn-group checkbox-g"
+                role="group"
+                aria-label="Basic checkbox toggle button group"
+              >
                 <input
-                  type="radio"
+                  type="checkbox"
                   class="btn-check"
-                  name="crust"
-                  id="btnradio2"
+                  id="btncheck1"
+                  autocomplete="off"
+                  value="50"
+                />
+                <label class="btn btn-outline-primary" for="btncheck1"
+                  >Mushroom</label
+                >
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck2"
+                  autocomplete="off"
+                  value="80"
+                />
+                <label class="btn btn-outline-primary" for="btncheck2"
+                  >Cheese</label
+                >
+
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btncheck3"
                   autocomplete="off"
                   value="100"
                 />
-                <label class="btn btn-outline-primary" for="btnradio2"
-                  >Gluten-Free</label
-                >
-              </div>
-
-              <div class="crust">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="crust"
-                  id="btnradio3"
-                  autocomplete="off"
-                  value="150"
-                />
-                <label class="btn btn-outline-primary" for="btnradio3"
-                  >Crispy</label
+                <label class="btn btn-outline-primary" for="btncheck3"
+                  >Pepperoni</label
                 >
               </div>
             </div>
-          </div>
-          <div>
-            <h5>Toppings</h5>
-            <div
-              class="btn-group checkbox-g"
-              role="group"
-              aria-label="Basic checkbox toggle button group"
-            >
-              <input
-                type="checkbox"
-                class="btn-check"
-                id="btncheck1"
-                autocomplete="off"
-                value="50"
-              />
-              <label class="btn btn-outline-primary" for="btncheck1"
-                >Mushroom</label
-              >
-
-              <input
-                type="checkbox"
-                class="btn-check"
-                id="btncheck2"
-                autocomplete="off"
-                value="80"
-              />
-              <label class="btn btn-outline-primary" for="btncheck2"
-                >Cheese</label
-              >
-
-              <input
-                type="checkbox"
-                class="btn-check"
-                id="btncheck3"
-                autocomplete="off"
-                value="100"
-              />
-              <label class="btn btn-outline-primary" for="btncheck3"
-                >Pepperoni</label
-              >
-            </div>
-          </div>
-        </form>
-        <div class="ksh-trolley add">
+          </form>
+          <div class="ksh-trolley add">
             <strong>Add To Cart</strong>
-        </div>
-      </div>
-      <div>
-        <h2 style="text-align: center;color: brown;">Cart</h2>
-        <table class="table table-bordered table-striped table-warning">
-          <thead>
-            <tr>
-              <th scope="col">Order(s)</th>
-              <th scope="col">Pizza Size</th>
-              <th scope="col">Crust</th>
-              <th scope="col">Toppings</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>dd</td>
-          </tr> -->
-          </tbody>
-        </table>
-        <button type="button" class="btn btn-primary check-out">Process Order & Check Out</button>
-        <div class="checkout-msg">
-          <h4 class="msg"></h4>
-          <h4 class="deliver"></h4>
-          <div class="accept-decline">
-            <span class="badge bg-success">Accept Delivery</span>
-            <span class="badge bg-danger">Decline Decline</span>
           </div>
-          <h4 class="final-msg"></h4>
+        </div>
+        <div>
+          <h2 style="text-align: center; color: brown">Cart</h2>
+          <table class="table table-bordered table-striped table-warning">
+            <thead>
+              <tr>
+                <th scope="col">Order(s)</th>
+                <th scope="col">Pizza Size</th>
+                <th scope="col">Crust</th>
+                <th scope="col">Toppings</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button type="button" class="btn btn-primary check-out">
+            Process Order & Check Out
+          </button>
+          <div class="checkout-msg">
+            <h4 class="msg"></h4>
+            <h4 class="deliver"></h4>
+            <div class="accept-decline">
+              <span class="badge bg-success">Accept Delivery</span>
+              <span class="badge bg-danger">Decline Decline</span>
+            </div>
+            <h4 class="final-msg"></h4>
+          </div>
         </div>
       </div>
     </div>
